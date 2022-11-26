@@ -33,7 +33,7 @@ const List = ({ list, loadLists }) => {
 
     try {
       await axios
-        .post("/api/list/deletelist", deletedList)
+        .post("https://trello-be.onrender.com/api/list/deletelist", deletedList)
         .then((result) => {
           loadLists();
           setModalOpen(false);
@@ -60,7 +60,7 @@ const List = ({ list, loadLists }) => {
 
     try {
       await axios
-        .post("/api/list/renamelist", renamedList)
+        .post("https://trello-be.onrender.com/api/list/renamelist", renamedList)
         .then((result) => {
           setIsRenameModal((prev) => !prev);
           setModalOpen(false);

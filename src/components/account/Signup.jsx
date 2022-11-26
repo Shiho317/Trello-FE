@@ -20,7 +20,7 @@ const Signup = () => {
     };
 
     try {
-      await axios.post("/api/user/signup", newUser);
+      await axios.post("https://trello-be.onrender.com/api/user/signup", newUser);
       alert("You have successfully created account.");
       setTimeout(() => {
         navigate('/')

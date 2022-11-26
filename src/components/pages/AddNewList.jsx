@@ -14,7 +14,7 @@ const AddNewList = ({ setAddNewList, loadLists }) => {
     }
 
     try {
-      await axios.post("/api/list/addlist", newTitle)
+      await axios.post("https://trello-be.onrender.com/api/list/addlist", newTitle)
       .then(result => {
         loadLists()
         setAddNewList(false)

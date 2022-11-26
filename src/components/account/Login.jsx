@@ -22,7 +22,7 @@ const Login = () => {
 
     try {
       const result = await axios.post(
-        "/api/user/login",
+        "https://trello-be.onrender.com/api/user/login",
         currUser
       );
       const userData = {

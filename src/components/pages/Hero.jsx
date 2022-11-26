@@ -12,7 +12,7 @@ const Hero = () => {
   const loadLists = async () => {
     try {
       await axios
-        .get("/api/list/todolists")
+        .get("https://trello-be.onrender.com/api/list/todolists")
         .then((result) => {
           setTodolists(result.data);
         });
@@ -56,7 +56,7 @@ const Hero = () => {
       };
 
       try {
-        axios.post("/api/list/todolists", sourceTodos);
+        axios.post("https://trello-be.onrender.com/api/list/todolists", sourceTodos);
       } catch (error) {
         console.log(error);
       }
@@ -75,7 +75,7 @@ const Hero = () => {
 
       try {
         axios
-          .post("/api/list/todolists", destinationTodos)
+          .post("https://trello-be.onrender.com/api/list/todolists", destinationTodos)
           .then((result) => {
             loadLists();
           });

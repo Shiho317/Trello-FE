@@ -30,7 +30,7 @@ const NewCard = ({ setAddNewCard, list, loadLists }) => {
     };
     try {
       await axios
-        .post("/api/list/todolists", newTodo)
+        .post("https://trello-be.onrender.com/api/list/todolists", newTodo)
         .then((result) => {
           console.log(result.status);
           loadLists();

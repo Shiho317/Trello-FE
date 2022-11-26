@@ -18,7 +18,7 @@ const Todos = ({ list, todo, index, loadLists }) => {
 
     try {
       await axios
-        .post("/api/list/todolists", deletedTodo)
+        .post("https://trello-be.onrender.com/api/list/todolists", deletedTodo)
         .then((result) => {
           loadLists();
         });
